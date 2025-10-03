@@ -10,7 +10,6 @@ jobs:
       service_name: notifications-service
       docker_context: .
       dockerfile: Dockerfile
-      registry: 768881856011.dkr.ecr.eu-west-2.amazonaws.com
       repository: microtodo/notifications-service
       image_tag: ${{ github.sha }}
     secrets: inherit
