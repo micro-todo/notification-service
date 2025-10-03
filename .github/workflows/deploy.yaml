@@ -5,7 +5,7 @@ on:
 
 jobs:
   deploy:
-    uses: micro-todo/infrastructure/.github/workflows/service-ci.yaml@9408fb96aba05404aa26bafecab021a9739e43ad
+    uses: micro-todo/infrastructure/.github/workflows/service-ci.yaml@9a62d20f2ea630548ed4bdfe57ef6dfe01566487
     with:
       service_name: notifications-service
       docker_context: .
