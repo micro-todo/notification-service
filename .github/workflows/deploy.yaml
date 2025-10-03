@@ -1,0 +1,16 @@
+name: deploy
+on:
+  push:
+    branches: [ "master" ]
+
+jobs:
+  deploy:
+    uses: micro-todo/infrastructure/.github/workflows/service-ci.yml@e6d7f4227cdb831d4b885b0a2dfecfc17e921951
+    with:
+      service_name: notifications-service
+      docker_context: .
+      dockerfile: Dockerfile
+      registry: 768881856011.dkr.ecr.eu-west-2.amazonaws.com
+      repository: microtodo/notifications-service
+      image_tag: ${{ github.sha }}
+    secrets: inherit
